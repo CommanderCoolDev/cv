@@ -274,13 +274,23 @@ p {
   border-radius: 50%;
   position: fixed;
   bottom: 130px;
-  right: 8%;
+  right: 1%;
   
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 1.5);
   overflow: hidden;
 
   
+}
+@media (min-width: 600px) {
+  .arrow-up {
+  right: 5%;
+  }
+}
+@media (min-width: 1000px) {
+  .arrow-up {
+  right: 18%;
+  }
 }
 
 .arrow-slide {
