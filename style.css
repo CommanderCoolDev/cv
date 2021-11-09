@@ -13,6 +13,10 @@ body {
   align-items: center;
   justify-content: center;
 }
+html {
+  /* filter: invert(1) hue-rotate(180deg); */
+  
+}
 .container {
   position: relative;
   width: 100%;
@@ -49,6 +53,16 @@ body {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
+  /* filter: invert(1) hue-rotate(180deg); */
+}
+.imgboxDark {
+  filter: invert(1) hue-rotate(180deg);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.imgboxLigth {
+  filter: invert() hue-rotate();
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .imgbox img {
   position: absolute;
@@ -57,6 +71,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* filter: invert(1) hue-rotate(180deg); */
 }
 .profile h2 {
   color: white;
@@ -330,4 +345,93 @@ p {
   transition: all 0.1s;
  
 }
+/*----------theme switch-----------*/
+ html[data-theme='light-theme'] {
+ 
+  ilter: invert() hue-rotate();
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+} 
+html[data-theme='dark-theme'] {
+  
+  filter: invert(1) hue-rotate(180deg);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.theme-switcher {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+ 
+}
+
+.theme-switch__input,
+.theme-switch__label {
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.theme-switch__input {
+  opacity: 0;
+}
+
+
+.theme-switch__label {
+  padding: 13px;
+  
+  transition: background-color 0.5s ease-in-out;
+  width: 28px;
+  height: 3px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: #e8cfc061;
+  box-shadow: -4px 4px 15px inset rgba(0, 0, 0, 0.4);
+}
+.theme-switch__label::before,
+.theme-switch__label::after {
+    font-size: 1.1rem;
+    position: absolute;
+    transform: translate3d(0, -50%, 0);
+    top: 50%;
+  }
+
+  
+
+  .theme-switch__label::after {
+    content: 'Light/Dark';
+    left: 100%;
+    margin-left: 10px;
+   
+  }
+
+  .circle {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 30px;
+    width: 100%;
+  }
+
+  .circle::after {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: -54px;
+    width: 16px;
+    height: 16px;
+    content: '';
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.5s, background-color 0.5s;
+    box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.4);
+  }
+
+
+
+
+  .theme-switch__label::after {
+    color: #fff;
+  }
+
+  .circle::after {
+    transform: translate3d(30px, 0, 0);
+  }
+
  
