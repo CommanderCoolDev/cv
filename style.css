@@ -107,7 +107,7 @@ body {
   margin-bottom: 15px;
 }
 .contactInfo.education h5 {
-  color: #77acf1;
+  color: #1c442b;
 }
 .contactInfo.education h4 {
   color: white;
@@ -165,7 +165,7 @@ p {
 }
 .about .box .text h4 {
   text-transform: uppercase;
-  color: #77acf1;
+  color: #1c442b;
   font-size: 16px;
   margin-bottom: 10px;
 }
@@ -201,7 +201,7 @@ p {
 }
 /* <-----Projects------> */
 .projects .box h4 {
-  color: #77acf1;
+  color: #1c442b;
   font-size: 18px;
   font-weight: 600;
 }
