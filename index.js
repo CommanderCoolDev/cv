@@ -17,16 +17,16 @@ function scrollToTop() {
     top: 0,
     behavior: 'smooth',
   });
-}//функция скрола вверх
+}
 
-const toggleSwitch = document.querySelector('.theme-switcher input[type="checkbox"]');//ссылка на тугл
+const toggleSwitch = document.querySelector('.theme-switcher input[type="checkbox"]');
 
 const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
-};// место хранения тем
+};
 
-toggleSwitch.addEventListener('change', switchTheme, false);//прослушка на переключателе тем
+toggleSwitch.addEventListener('change', switchTheme, false);
 
  function switchTheme(e) {
   if (e.target.checked) {//проверка положения тугла
@@ -42,7 +42,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);//прослушка
     document.querySelector('img').classList.add('imgboxLight');
     localStorage.setItem('theme', Theme.LIGHT);
   }
-}// функция смены темы
+}
 
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;// проверку текущей темы
 
@@ -51,5 +51,5 @@ if (currentTheme) {
 
   if (currentTheme === Theme.DARK) {
     toggleSwitch.checked = true;
-  }//проверка положения переключателя
+  }
 }
